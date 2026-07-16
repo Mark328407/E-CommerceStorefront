@@ -2,7 +2,7 @@
 
 A full-stack MERN e-commerce storefront frontend, built with React, Vite, TypeScript, and Tailwind CSS. Consumes a live Express + MongoDB REST API for products, cart, auth, and orders.
 
-**Live demo:** _add your Vercel URL here, e.g. https://fieldstore-estrecho.vercel.app_
+**Live demo:** [https://e-commerce-storefront-eight.vercel.app/](https://e-commerce-storefront-eight.vercel.app/)
 
 ## Features
 
