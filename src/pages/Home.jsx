@@ -13,7 +13,16 @@ export function Home() {
         setProducts(data);
         setStatus("ready");
       })
-      .catch(() => setStatus("error"));
+      .catch((err) => {
+        // The backend sends a 404 with this message when the catalog is simply empty —
+        // that's not a connection failure, so don't scare the user with a network error.
+        if (err instanceof Error && /no active product/i.test(err.message)) {
+          setProducts([]);
+          setStatus("ready");
+        } else {
+          setStatus("error");
+        }
+      });
   }, []);
 
   const filtered = products.filter((p) =>
@@ -54,7 +63,13 @@ export function Home() {
         </p>
       )}
 
-      {status === "ready" && filtered.length === 0 && (
+      {status === "ready" && filtered.length === 0 && products.length === 0 && (
+        <p className="mx-auto max-w-6xl px-6 py-16 text-sm text-muted">
+          No products in the catalog yet. Add some via <code>POST /products</code> as an admin user.
+        </p>
+      )}
+
+      {status === "ready" && filtered.length === 0 && products.length > 0 && (
         <p className="mx-auto max-w-6xl px-6 py-16 text-sm text-muted">No products match "{query}".</p>
       )}
 

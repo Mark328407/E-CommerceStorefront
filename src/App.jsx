@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar.jsx";
+import { Footer } from "./components/Footer.jsx";
 import { Home } from "./pages/Home.jsx";
 import { ProductDetail } from "./pages/ProductDetail.jsx";
 import { Cart } from "./pages/Cart.jsx";
@@ -21,11 +22,7 @@ export default function App() {
           <Route path="/orders" element={<Orders />} />
         </Routes>
       </main>
-      <footer className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-6 py-8 text-xs text-muted">
-          Fieldstore — a demo storefront by Mark Anthony Estrecho, powered by a live Express + MongoDB API.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
