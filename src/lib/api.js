@@ -1,7 +1,7 @@
-// Base URL for the E-Commerce API (Capstone 2, Express + MongoDB, deployed on Render).
+// Base URL for the storefront's dedicated E-Commerce API (Express + MongoDB, deployed on Render).
 // Override locally via .env -> VITE_API_BASE_URL for local backend testing.
 export const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "https://capstone-2-wxg9.onrender.com";
+  import.meta.env.VITE_API_BASE_URL || "https://e-commerce-storefront-gsgs.onrender.com";
 
 function getToken() {
   return localStorage.getItem("access_token");

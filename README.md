@@ -16,7 +16,7 @@ A full-stack MERN e-commerce storefront frontend, built with React, Vite, TypeSc
 ## Tech Stack
 
 - **Frontend:** React 18, TypeScript, Vite, Tailwind CSS 4, React Router
-- **Backend:** [E-Commerce API](https://github.com/Mark328407/E-Commerce-API) — Express, MongoDB/Mongoose, JWT auth, deployed on Render at `https://capstone-2-wxg9.onrender.com`
+- **Backend:** E-Commerce Storefront API — Express, MongoDB/Mongoose, JWT auth, deployed on Render at `https://e-commerce-storefront-gsgs.onrender.com`
 
 ## Getting Started
 
@@ -47,4 +47,3 @@ Deployed on Vercel. Build command: `npm run build`, output directory: `dist`.
 ## Author
 
 **Mark Anthony Estrecho** — [Portfolio](https://my-portfolio-cilr.vercel.app/) · [GitHub](https://github.com/Mark328407)
-# E-CommerceStorefront
